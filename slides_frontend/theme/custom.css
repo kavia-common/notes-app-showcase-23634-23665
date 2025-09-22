@@ -1,43 +1,49 @@
 :root {
-  /* Core dark palette — neutral blue/purple accent */
-  --theme-bg-canvas: #1A1B1F;       /* dark charcoal canvas */
-  --theme-bg-elevated: #21222A;     /* cards/surfaces */
-  --theme-bg-elev-1: #21222A;
-  --theme-bg-elev-2: #282931;
-  --theme-bg-elev-3: #2F3039;
-  --theme-bg-sidebar: #161719;
+  /* Ocean Professional — aligns to provided style guide */
+  --theme-bg-canvas: #0f172a;           /* darker canvas for contrast */
+  --theme-bg-elevated: #111827;         /* surface equivalent in dark mode */
+  --theme-bg-elev-1: #111827;
+  --theme-bg-elev-2: #1f2937;
+  --theme-bg-elev-3: #111827;
+  --theme-bg-sidebar: #0b1220;
 
-  --theme-text-primary: #F4F4F5;
-  --theme-text-secondary: #C9C9CF;
-  --theme-text-muted: #9C9CA3;
-  --theme-icon-muted: #8B8B92;
+  /* Text colors from guide (text: #111827) adapted for dark mode scales */
+  --theme-text-primary: #e5e7eb;
+  --theme-text-secondary: #cbd5e1;
+  --theme-text-muted: #94a3b8;
+  --theme-icon-muted: #94a3b8;
 
-  --theme-border-subtle: #34353A;
-  --theme-border-strong: #43444A;
+  --theme-border-subtle: #233049;
+  --theme-border-strong: #334155;
 
-  /* Primary brand – Blue/Purple */
-  --theme-primary-600: #5B6FDB;
-  --theme-primary-500: #6B7FEB;
-  --theme-primary-400: #8B9FFB;
-  --theme-primary-300: #A8B7FF;
-  --theme-primary-200: #C8D1FF;
-  --theme-primary-50:  #EEF0FF;
+  /* Brand and accents from style guide */
+  --theme-primary-600: #2563EB; /* primary */
+  --theme-primary-500: #3B82F6;
+  --theme-primary-400: #60A5FA;
+  --theme-primary-300: #93C5FD;
+  --theme-primary-200: #BFDBFE;
+  --theme-primary-50:  #EFF6FF;
 
-  /* Accent aliases for backwards compatibility */
-  --theme-accent: var(--theme-primary-500);
+  --ocean-secondary: #F59E0B;  /* secondary (amber) */
+  --ocean-error: #EF4444;      /* error */
+  --ocean-surface: #ffffff;    /* light surface for elements when needed */
+  --ocean-background: #f9fafb; /* reference background (light design token) */
+
+  /* Aliases */
+  --theme-accent: var(--theme-primary-600);
   --theme-accent-strong: var(--theme-primary-600);
 
   /* Semantic */
-  --theme-success: #40D79E;
-  --theme-warning: #FFC75A;
-  --theme-danger:  #FF6B6B;
-  --theme-info:    #6EB9FF;
+  --theme-success: #22c55e;
+  --theme-warning: var(--ocean-secondary);
+  --theme-danger:  var(--ocean-error);
+  --theme-info:    #38bdf8;
 
   /* Controls */
-  --theme-btn-primary-fg: #1A1B1F;
-  --theme-btn-primary-bg: var(--theme-primary-500);
-  --theme-btn-primary-hover: var(--theme-primary-600);
-  --theme-btn-primary-press: #4B5FCB;
+  --theme-btn-primary-fg: #ffffff;
+  --theme-btn-primary-bg: var(--theme-primary-600);
+  --theme-btn-primary-hover: #1d4ed8;
+  --theme-btn-primary-press: #1e40af;
   --theme-btn-ghost-fg: var(--theme-text-secondary);
   --theme-btn-ghost-hover-bg: var(--theme-bg-elev-2);
   --theme-chip-bg: var(--theme-bg-elev-2);
@@ -46,15 +52,15 @@
   --theme-chip-active-fg: var(--theme-text-primary);
 
   /* Focus and overlays */
-  --theme-focus-ring: var(--theme-primary-400);
-  --theme-overlay-ambient: linear-gradient(180deg, rgba(107,127,235,0.18) 0%, rgba(0,0,0,0) 55%);
+  --theme-focus-ring: var(--theme-primary-300);
+  --theme-overlay-ambient: linear-gradient(180deg, rgba(37,99,235,0.18) 0%, rgba(0,0,0,0) 55%);
 
-  /* Lines (generic fallbacks still supported) */
+  /* Lines */
   --line-subtle: var(--theme-border-subtle);
   --line: var(--theme-border-subtle);
   --line-strong: var(--theme-border-strong);
 
-  /* Deprecated/legacy tokens retained as fallbacks to new ones */
+  /* Fallbacks */
   --bg-canvas: var(--theme-bg-canvas);
   --bg-elevated: var(--theme-bg-elevated);
   --bg-muted: var(--theme-bg-elev-2);
@@ -64,16 +70,16 @@
   --text-inverted: #0D0F14;
   --text-link: var(--theme-primary-300);
 
-  /* Accent family retained for charts and cool highlights if needed */
-  --accent-primary: var(--theme-primary-500);
+  /* Accent family */
+  --accent-primary: var(--theme-primary-600);
   --accent-primary-600: var(--theme-primary-600);
   --accent-primary-400: var(--theme-primary-400);
-  --accent-secondary: #17D1D4;
-  --accent-warm: #FF5C8A;
+  --accent-secondary: var(--ocean-secondary);
+  --accent-warm: #fb7185;
 
-  /* Gradients: primary brand */
-  --grad-primary: linear-gradient(135deg, var(--theme-primary-600) 0%, var(--theme-primary-400) 50%, var(--theme-primary-300) 100%);
-  --grad-hero: radial-gradient(1200px 600px at 60% -10%, rgba(107,127,235,0.22) 0%, rgba(139,159,251,0.15) 35%, rgba(26,27,31,0) 70%);
+  /* Gradients */
+  --grad-primary: linear-gradient(135deg, #2563EB 0%, #60A5FA 50%, #93C5FD 100%);
+  --grad-hero: radial-gradient(1200px 600px at 60% -10%, rgba(37,99,235,0.22) 0%, rgba(96,165,250,0.15) 35%, rgba(15,23,42,0) 70%);
 }
 
 /* Base */
@@ -143,8 +149,8 @@ a:hover {
   gap: 8px;
   padding: 4px 10px;
   border-radius: 9999px;
-  background: color-mix(in oklab, var(--theme-primary-500) 8%, #000);
-  border: 1px solid color-mix(in oklab, var(--theme-primary-500) 22%, #000);
+  background: color-mix(in oklab, var(--theme-primary-600) 8%, #000);
+  border: 1px solid color-mix(in oklab, var(--theme-primary-600) 22%, #000);
   color: var(--theme-text-primary);
   font-weight: 600;
   font-size: 12px;
@@ -164,7 +170,7 @@ a:hover {
   padding: 12px 20px;
   font-weight: 700;
   cursor: pointer;
-  box-shadow: 0 8px 24px rgba(107,127,235,0.25);
+  box-shadow: 0 8px 24px rgba(37,99,235,0.25);
 }
 .button:hover, .btn-primary:hover {
   background: var(--theme-btn-primary-hover);
@@ -184,15 +190,15 @@ a:hover {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  background: var(--theme-btn-ghost-hover-bg);
-  border: 1px solid var(--theme-border-subtle);
-  color: var(--theme-btn-ghost-fg);
+  background: color-mix(in oklab, var(--theme-btn-ghost-hover-bg) 60%, #0000);
+  border: 1px solid var(--ocean-secondary);
+  color: var(--ocean-secondary);
   border-radius: 12px;
   padding: 12px 20px;
   font-weight: 600;
 }
 .btn-secondary:hover {
-  background: color-mix(in oklab, var(--theme-btn-ghost-hover-bg) 80%, #000);
+  background: color-mix(in oklab, var(--ocean-secondary) 14%, #0000);
 }
 .btn-secondary:focus-visible {
   outline: 2px solid var(--theme-focus-ring);
@@ -281,7 +287,7 @@ a:hover {
 
 .feature-card:hover, .problem-card:hover {
   transform: translateY(-2px);
-  border-color: color-mix(in oklab, var(--theme-primary-500) 30%, var(--theme-border-subtle));
+  border-color: color-mix(in oklab, var(--theme-primary-600) 30%, var(--theme-border-subtle));
   box-shadow: 0 14px 36px rgba(0,0,0,0.34);
 }
 
@@ -490,7 +496,7 @@ code, pre code, .slidev-code {
   grid-template-columns: 1.2fr 0.8fr;
   gap: 16px;
   align-items: center;
-  background: linear-gradient(180deg, rgba(107,127,235,0.08), rgba(139,159,251,0.06));
+  background: linear-gradient(180deg, rgba(37,99,235,0.08), rgba(96,165,250,0.06));
   border: 1px solid var(--theme-border-subtle);
   border-radius: 16px;
   padding: 24px;
